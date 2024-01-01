@@ -14,9 +14,22 @@ public class enabledisabletab implements TabCompleter {
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         List<String> c = new ArrayList<>();
         Plugin[] p = Bukkit.getServer().getPluginManager().getPlugins();
-        for (int i = 0; i < p.length; i++) {
-            c.add(p[i].getName());
+        if(s.equals("disable")){
+            for (Plugin plugin : p) {
+                if (plugin.isEnabled()) {
+                    c.add(plugin.getName());
+                }
+            }
         }
+        if(s.equals("enable")){
+            for (Plugin plugin : p) {
+                if (!(plugin.isEnabled())) {
+                    c.add(plugin.getName());
+                }
+            }
+
+        }
+
 
         return c;
     }

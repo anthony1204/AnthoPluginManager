@@ -26,7 +26,7 @@ public final class AnthoPlugManager extends JavaPlugin implements CommandExecuto
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String cmdname, String[] arg) {
-        if(cmdname.equals("rs")){Player p = (Player) commandSender; p.performCommand("/reload confirm");}
+        if(cmdname.equals("rs")){Player p = (Player) commandSender; p.performCommand("reload confirm");}
         if(cmdname.equals("disable")){Bukkit.getServer().getPluginManager().disablePlugin(Bukkit.getPluginManager().getPlugin(arg[0]));commandSender.sendMessage("disabled plugin");}
         if(cmdname.equals("enable")){
             Bukkit.getServer().getPluginManager().enablePlugin(Bukkit.getPluginManager().getPlugin(arg[0]));
