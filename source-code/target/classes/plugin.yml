@@ -1,0 +1,11 @@
+name: AnthoPlugManager
+version: '0.0.1'
+main: com.antho.anthoplugmanager.AnthoPlugManager
+api-version: '1.20'
+commands:
+  disable:
+    description: disable plugin
+  enable:
+    description: enable plugin
+  rs:
+    description: reload server
